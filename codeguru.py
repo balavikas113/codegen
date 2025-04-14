@@ -83,6 +83,9 @@ def generate_code(problem_statement):
     except Exception as e:
         return f"Error: {str(e)}"
 
+# Get the absolute path to the CSS file
+css_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "style.css")
+
 # Create a simple interface
 def create_interface():
     # Using the simple interface approach to avoid JavaScript integration issues
@@ -98,7 +101,8 @@ def create_interface():
             ["Create a simple REST API with Flask that stores and retrieves user data."],
         ],
         allow_flagging="never",
-        css="style.css"
+        css=style.css
+        
     )
     
     return interface
